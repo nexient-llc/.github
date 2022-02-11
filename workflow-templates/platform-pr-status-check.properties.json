@@ -1,6 +1,6 @@
 {
-    "name": "Make Docker Action",
-    "description": "Invokes make from the dev container.",
+    "name": "Platform PR Status Check Action",
+    "description": "Invokes make check from the dev container.",
     "categories": [
         "Dockerfile"
     ],
