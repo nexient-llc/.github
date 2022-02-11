@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  make_docker_job:
+  make_check_job:
     runs-on: ubuntu-latest
-    name: A job to invoke make in the dev container
+    name: Make Check
     steps:
       - name: Checkout
         uses: actions/checkout@v2
