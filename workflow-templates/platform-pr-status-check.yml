@@ -15,6 +15,6 @@ jobs:
           submodules: true
 
       - name: Make Docker Action
-        uses: actions/make-docker-action@v1
+        uses: nexient-llc/make-docker-action@v1
         with:
           target: check
