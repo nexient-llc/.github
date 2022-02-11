@@ -1,0 +1,11 @@
+{
+    "name": "Platform Release Action",
+    "description": "Invokes make release from the dev container.",
+    "categories": [
+        "Dockerfile"
+    ],
+    "filePatterns": [
+        "Dockerfile",
+        ".dockerfile"
+    ]
+}
