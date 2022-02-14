@@ -1,4 +1,4 @@
-name: Create and Push Git Tag, Create Publish Docker Image
+name: Create and Push Git Tag and Docker Image
 
 on: [push]
 
