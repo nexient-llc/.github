@@ -1,5 +1,5 @@
 name: pipeline-check
-on: [push, workflow_call]
+on: [workflow_call]
 jobs:
   check:
     runs-on: ubuntu-latest

@@ -1,8 +1,5 @@
 name: pipeline-release
-on:
-  pull_request:
-    branches:
-      - 'main'
+on: [workflow_call]
 jobs:
   release:
     runs-on: ubuntu-latest
