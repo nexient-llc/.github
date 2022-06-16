@@ -4,8 +4,10 @@ on:
   push:
     branches:
       - main
+      - feature/DEVOPS-218
     paths:
       - '.github/workflows/**'
+      - 'actions/**'
   workflow_dispatch: 
     inputs:
       repo_name:
