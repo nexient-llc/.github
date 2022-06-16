@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - '.github/workflows/**'
-      - 'actions/**'
   workflow_dispatch: 
     inputs:
       repo_name:
