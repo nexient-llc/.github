@@ -1,0 +1,28 @@
+name: sync-workflows
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/**'
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Replicating files
+        uses: derberg/copy-files-to-other-repositories@v1.0.0
+        with:
+          github_token: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
+          patterns_to_include: '.github/workflows/platform-check.yml', 'workflows/platform-release.yml'
+          patterns_to_ignore: '.github/workflows/sync-global-workflows.yml'
+          topics_to_include: platform-tf-module
+          exclude_private: true
+          exclude_forked: true
+          branches: main
+          committer_username: bbleau
+          committer_email: bbleau@nexient.com
+          commit_message: "ci: update platform terraform module workflows"

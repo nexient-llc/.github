@@ -1,12 +1,20 @@
+# This file is managed by https://github.com/nexient-llc/.github/
+
+# DO NOT make changes to this file directly from within any other
+# repo then mentioned above as they will be overwritten upon the
+# next sync.
+
 name: pipeline-release
 on:
   pull_request:
     branches:
       - 'main'
+    types:
+      - closed
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.repository.name, 'tf-')
+    if: github.event.pull_request.merged == true
     container:
       image: nexientdevops/platform-images
     steps:

@@ -1,9 +1,18 @@
+# This file is managed by https://github.com/nexient-llc/.github/
+
+# DO NOT make changes to this file directly from within any other
+# repo then mentioned above as they will be overwritten upon the
+# next sync.
+
 name: pipeline-check
-on: [push, workflow_call]
+on:
+  push:
+    branches:
+      - '**'
+      - '!main'
 jobs:
   check:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.repository.name, 'tf-')
     container:
       image: nexientdevops/platform-images
     steps:
