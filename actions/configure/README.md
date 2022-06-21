@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Run make configure
-      uses: ./.github/actions/configure
+      uses: nexient-llc/.github/actions/configure
       with:
         IS_PIPELINE: true
         JOB_NAME: "job"
