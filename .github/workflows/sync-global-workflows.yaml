@@ -24,8 +24,8 @@ jobs:
         uses: bbleau/copy-files-to-other-repositories@fix/workflow-dispatch-readdir-recursively
         with:
           github_token: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
-          patterns_to_include: .github/workflows/platform-check.yml,.github/workflows/platform-release.yml
-          patterns_to_ignore: .github/workflows/sync-global-workflows.yml
+          patterns_to_include: .github/workflows/platform-check.yaml,.github/workflows/platform-release.yaml
+          patterns_to_ignore: .github/workflows/sync-global-workflows.yaml
           topics_to_include: platform-tf-module
           exclude_private: true
           exclude_forked: true
