@@ -15,5 +15,5 @@ jobs:
     - name: checkout source
       uses: actions/checkout@master
     - name: Run Make Release
-      uses: ./.github/actions/release
+      uses: nexient-llc/.github/actions/release
 ```

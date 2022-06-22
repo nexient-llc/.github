@@ -29,3 +29,5 @@ jobs:
       - uses: nexient-llc/.github/actions/check@main
       - uses: nexient-llc/.github/actions/pre-merge@main
       - uses: nexient-llc/.github/actions/release@main
+        with:
+          mode: "git-branch"

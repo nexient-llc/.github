@@ -11,9 +11,11 @@ inputs:
     default: true
   JOB_NAME:
     description: "Sets the git user's name for the job"
+    default: "nexient-github-sa"
     required: true
   JOB_EMAIL:
     description: "Sets the git user's email for the job"
+    default: "service-account@nexient.com"
     required: true
   REPO_MANIFESTS_URL:
     description: "The repository containing the repo manifest"

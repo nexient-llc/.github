@@ -30,6 +30,6 @@ jobs:
           exclude_private: true
           exclude_forked: true
           branches: main
-          committer_username: bbleau
-          committer_email: bbleau@nexient.com
+          committer_username: nexient-github-sa
+          committer_email: service-account@nexient.com
           commit_message: 'ci: update platform terraform module workflows'

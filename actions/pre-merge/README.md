@@ -21,7 +21,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Run pre-merge action
-      uses: ./.github/actions/pre-merge
+      uses: nexient-llc/.github/actions/pre-merge
       with:
         branch: "origin/main"
 ```
