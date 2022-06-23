@@ -19,3 +19,5 @@ jobs:
           git config --global --add safe.directory /__w/${{ github.event.repository.name }}/${{ github.event.repository.name }}
       - uses: nexient-llc/.github/actions/pre-merge@main
       - uses: nexient-llc/.github/actions/release
+        with:
+          mode: 'minor'
