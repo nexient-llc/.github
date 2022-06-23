@@ -43,3 +43,7 @@ If a workflow already exists that fits the repos need you can add a topic to the
 
 - https://github.blog/2017-01-31-introducing-topics/
 - https://github.com/derberg/copy-files-to-other-repositories
+
+### Good to Knows & Gotchas
+
+- Should the sync action get triggered upon merge it will only syncronise changes made within the merge. Any prior changes that are not present within the target repos and also not present in the merge will not be synced. If this is the case, manually sync the repo using the stops in `Adding a repo`.
