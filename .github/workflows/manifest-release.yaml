@@ -5,7 +5,7 @@ on:
       - 'main'
     paths:
       - '*.xml'
-      - '!.github/workflows/**'
+      - '!.github/**'
 jobs:
   release:
     runs-on: ubuntu-latest
