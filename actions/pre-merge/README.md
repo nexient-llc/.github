@@ -13,7 +13,7 @@ name: "Example Workflow"
 on: [pull_request]
 
 jobs:
-  configure:
+  premerge:
     runs-on: nexient-llc/platform-images
     steps:
     - name: checkout source

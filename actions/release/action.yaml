@@ -1,16 +1,17 @@
-name: "Make Release Action"
-description: "Run Make Release"
+name: "Tag Release Action"
+description: "create tagged release"
 author: "Nexient DevSecOps"
 
 inputs:
   mode:
     description: "Sets the versioning type to use. For options see https://github.com/restechnica/semverbot#modes"
-    default: "auto"
+    default: "git-branch"
 runs:
   using: "composite"
   steps:
-    - name: make release
+    - name: tag release
       run: |
-        mode=${{ inputs.mode }} \
-        make release
+        sbot update version
+        sbot release version -m ${{ inputs.mode }}
+        sbot push version
       shell: bash
