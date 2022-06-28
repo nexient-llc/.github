@@ -38,12 +38,12 @@ jobs:
         uses: bbleau/copy-files-to-other-repositories@fix/workflow-dispatch-readdir-recursively
         with:
           github_token: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
-          patterns_to_include: .github/workflows/manifest-check.yaml,.github/workflows/manifest-release.yaml
+          patterns_to_include: .github/workflows/basic-check.yaml,.github/workflows/basic-release.yaml
           patterns_to_ignore: .github/workflows/sync-global-workflows.yaml
-          topics_to_include: platform-module-manifest
+          topics_to_include: platform-module-manifest, platform-component
           exclude_private: true
           exclude_forked: true
           branches: main
           committer_username: nexient-github-sa
           committer_email: service-account@nexient.com
-          commit_message: 'ci: update platform manifest workflows'
+          commit_message: 'ci: update platform workflows'
