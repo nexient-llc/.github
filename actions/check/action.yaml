@@ -11,16 +11,13 @@ inputs:
     default: false
 runs:
   using: "composite"
-  env:
-    GREP: "grep"
-    FIND: "find"
   steps:
     - uses: actions/setup-go@v3
       with:
         go-version: 1.17
     - name: Determine if go files exist
       run: |
-        echo "$(FIND) $(1)/ -name '*.go' | $(GREP) -q '\.go' || exit 0" >> $GO_FILES_EXIST
+        echo "GO_FILES_EXIST=$(find $(pwd)/ -name '*.go' | grep -q '\.go')" >> $GITHUB_ENV
     - name: Go CI Lint
       if: inputs.disableGoLangCILintAction && env.GO_FILES_EXIST
       uses: golangci/golangci-lint-action@v3
