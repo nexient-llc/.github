@@ -18,6 +18,7 @@ runs:
     - name: Determine if go files exist
       run: |
         echo "GO_FILES_EXIST=$(find $(pwd)/ -name '*.go' | grep -q '\.go')" >> $GITHUB_ENV
+      shell: bash
     - name: Go CI Lint
       if: inputs.disableGoLangCILintAction && env.GO_FILES_EXIST
       uses: golangci/golangci-lint-action@v3
