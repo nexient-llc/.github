@@ -8,7 +8,7 @@
 # at the workflow until we come up with a better solution at a
 # future date.
 env:
-  TF_VAR_GITHUB_ORG: ${{ secrets.TF_VAR_GITHUB_ORG }}
+  TF_VAR_github_org: ${{ secrets.TF_VAR_GITHUB_ORG }}
   TF_VAR_GITHUB_TOKEN:  ${{ secrets.TF_VAR_GITHUB_TOKEN }}
 
 name: pipeline-release
