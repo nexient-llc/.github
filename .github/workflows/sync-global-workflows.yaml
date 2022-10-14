@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Replicating files (platform-tf-modules, platform-magicdust)
-        uses: bbleau/copy-files-to-other-repositories@fix/workflow-dispatch-readdir-recursively
+        uses: derberg/copy-files-to-other-repositories@v1.0.3
         with:
           github_token: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
           patterns_to_include: .github/workflows/platform-check.yaml,.github/workflows/platform-release.yaml
@@ -35,7 +35,7 @@ jobs:
           committer_email: service-account@nexient.com
           commit_message: 'ci: update platform terraform module workflows'
       - name: Replicating files (platform-module-manifest)
-        uses: bbleau/copy-files-to-other-repositories@fix/workflow-dispatch-readdir-recursively
+        uses: derberg/copy-files-to-other-repositories@v1.0.3
         with:
           github_token: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
           patterns_to_include: .github/workflows/basic-check.yaml,.github/workflows/basic-release.yaml
